@@ -7,9 +7,6 @@ const { getTitanX, getEventFilters, getSignatures } = require('../lib/contract')
 const { addMintStartedEvents } = require('../lib/database')
 
 
-const abi = require('../abi/titanx.abi.json')
-
-
 router.get('/scrape/mintstarted', async function(request, env, ctx) {
   const { provider, contract } = await getTitanX(env)
 
@@ -30,6 +27,7 @@ router.get('/scrape/mintstarted', async function(request, env, ctx) {
   }
 
 })
+
 
 
 router.get('/', async function(request, env, ctx) {
